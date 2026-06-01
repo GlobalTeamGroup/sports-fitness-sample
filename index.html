@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="ВАША КОМПАНИЯ — сайт вашей компании. Современный дизайн, удобная навигация и всё для привлечения клиентов." />
+  <title>ВАША КОМПАНИЯ — Ваша ниша</title>
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <canvas id="gl-canvas"></canvas>
+  <canvas id="particle-canvas"></canvas>
+  <div class="grain-overlay"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" data-scroll="0">
+        <img src="images/logo.png" alt="ВАША КОМПАНИЯ Logo" class="logo-img" />
+        <span class="logo-text">ВАША <span class="logo-accent">КОМПАНИЯ</span></span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#" data-scroll="1" class="nav-link">Programs</a></li>
+        <li><a href="#" data-scroll="2" class="nav-link">Results</a></li>
+        <li><a href="#" data-scroll="3" class="nav-link">Journey</a></li>
+        <li><a href="#" data-scroll="4" class="nav-link">About</a></li>
+        <li><a href="#" data-scroll="5" class="nav-link nav-cta">Join Now</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="nav-scrim" id="nav-scrim" hidden></div>
+  <div class="nav-drawer" id="nav-drawer" hidden>
+    <button class="drawer-close" id="drawer-close" aria-label="Close">✕</button>
+    <ul class="drawer-links" id="drawer-links">
+      <li><a href="#" data-scroll="1" class="drawer-link">Programs</a></li>
+      <li><a href="#" data-scroll="2" class="drawer-link">Results</a></li>
+      <li><a href="#" data-scroll="3" class="drawer-link">Journey</a></li>
+      <li><a href="#" data-scroll="4" class="drawer-link">About</a></li>
+      <li><a href="#" data-scroll="5" class="drawer-link">Join Now</a></li>
+    </ul>
+    <div class="drawer-contacts">
+    </div>
+  </div>
+
+  <div id="ui-layer">
+    <div class="stage">
+
+      <section class="page is-active" data-index="0" id="hero">
+        <div class="page-inner hero-inner">
+          <img src="images/logo.png" alt="ВАША КОМПАНИЯ" class="hero-logo reveal-3d">
+          <div class="hero-badge reveal-3d">ВАШ БРЕНД • ВАША НИША • ВАШЕ НАПРАВЛЕНИЕ</div>
+          <h1 class="hero-title reveal-3d">ЗДЕСЬ БУДЕТ ИМЯ<br><span class="gradient-text">ВАШЕЙ КОМПАНИИ</span></h1>
+          <p class="hero-subtitle reveal-3d">Тут Вы можете написать свой слоган, краткое описание или горячее предложение - всё, что пожелаете!</p>
+          <div class="hero-cta-group reveal-3d">
+            <a href="#" data-scroll="1" class="btn-primary">Сделать кнопку</a>
+            <a href="#" data-scroll="5" class="btn-outline">Свои ссылки</a>
+          </div>
+          <div class="hero-scroll-hint"><div class="scroll-line"></div><span>scroll</span></div>
+        </div>
+      </section>
+
+      <section class="page" data-index="1" id="services">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Our Programs</div>
+          <h2 class="section-title reveal-3d">Ваши<br><span class="gradient-text">услуги</span></h2>
+          <p class="section-desc reveal-3d">Здесь вы можете рассказать о своём предложении как в примерах ниже.</p>
+          <div class="services-grid reveal-3d">
+            <div class="service-card">
+              <div class="service-icon">💪</div>
+              <h3>Personal Training</h3>
+              <p>One-on-one sessions with certified trainers. Customized workout plans designed for your specific goals and fitness level.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">👥</div>
+              <h3>Group Classes</h3>
+              <p>High-energy group sessions including HIIT, spinning, and circuit training. Motivation through community and shared goals.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🏋️</div>
+              <h3>CrossFit</h3>
+              <p>Functional fitness at its finest. Build strength, endurance, and agility through varied, high-intensity workouts.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🧘</div>
+              <h3>Yoga & Pilates</h3>
+              <p>Balance body and mind. From power yoga to reformer pilates — flexibility, core strength, and inner peace.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🥊</div>
+              <h3>Boxing & MMA</h3>
+              <p>Learn from professional fighters. Cardio boxing, technique drills, and competitive training for all levels.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🥗</div>
+              <h3>Nutrition Coaching</h3>
+              <p>Fuel your performance. Personalized meal plans, supplement guidance, and metabolic assessments.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" data-index="2" id="collections">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Success Stories</div>
+          <h2 class="section-title reveal-3d">Здесь могут быть<br><span class="gradient-text">примеры ваших работ</span></h2>
+          <p class="section-desc reveal-3d">Добавьте то, что всех поразит</p>
+          <div class="collections-grid reveal-3d">
+            <div class="collection-card card-large">
+              <div class="collection-overlay">
+                <span class="collection-label">Город N</span>
+                <h3>ООО «Рога и Копыта»</h3>
+                <p>Проект «Альфа» — современное решение для бизнеса в самом центре делового района.</p>
+              </div>
+            </div>
+            <div class="collection-card card-medium">
+              <div class="collection-overlay">
+                <span class="collection-label">Побережье</span>
+                <h3>Компания «Авангард»</h3>
+                <p>Лофт «Меридиан» — уникальное пространство, созданное с вниманием к каждой детали.</p>
+              </div>
+            </div>
+            <div class="collection-card card-medium">
+              <div class="collection-overlay">
+                <span class="collection-label">Бизнес-район</span>
+                <h3>Корпорация «Феникс»</h3>
+                <p>Комплекс «Луч» — масштабный проект, объединяющий комфорт и функциональность.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" data-index="3" id="production">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Your Journey</div>
+          <h2 class="section-title reveal-3d">The<br><span class="gradient-text">Fitness Journey</span></h2>
+          <p class="section-desc reveal-3d">Расскажите о том, как выглядит ваше сотрудничество с клиентами, как в примере ниже</p>
+          <div class="production-layout reveal-3d">
+            <div class="production-stats">
+              <div class="stat-card"><span class="stat-number">12+</span><span class="stat-label">years of excellence</span></div>
+              <div class="stat-card"><span class="stat-number">50+</span><span class="stat-label">certified trainers</span></div>
+              <div class="stat-card"><span class="stat-number">10K+</span><span class="stat-label">members trained</span></div>
+              <div class="stat-card"><span class="stat-number">24/7</span><span class="stat-label">facility access</span></div>
+              <div class="production-steps">
+                <div class="prod-step"><span class="step-num">01</span><span class="step-text">Initial fitness assessment & goal setting</span></div>
+                <div class="prod-step"><span class="step-num">02</span><span class="step-text">Personalized program design</span></div>
+                <div class="prod-step"><span class="step-num">03</span><span class="step-text">Progressive training with expert guidance</span></div>
+                <div class="prod-step"><span class="step-num">04</span><span class="step-text">Regular performance tracking & adjustments</span></div>
+                <div class="prod-step"><span class="step-num">05</span><span class="step-text">Achievement celebration & new goal setting</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" data-index="4" id="about">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">About Us</div>
+          <h2 class="section-title reveal-3d">О<br><span class="gradient-text">нас</span></h2>
+          <p class="section-desc reveal-3d">Расскажите о достижениях Вашей компании, поделитесь хорошими отзывами</p>
+          <div class="about-grid reveal-3d">
+            <div class="about-card">
+              <div class="about-icon">🏆</div>
+              <h3>Championship Mindset</h3>
+              <p>Training philosophy rooted in competitive excellence. Every workout is a step toward your personal best.</p>
+            </div>
+            <div class="about-card">
+              <div class="about-icon">🔬</div>
+              <h3>Science-Based Training</h3>
+              <p>Programs designed using the latest exercise science research. Optimal results through evidence-based methodology.</p>
+            </div>
+            <div class="about-card">
+              <div class="about-icon">🤝</div>
+              <h3>Community & Support</h3>
+              <p>Join a tribe of dedicated athletes. Group motivation, friendly competition, and lifelong fitness connections.</p>
+            </div>
+            <div class="about-card">
+              <div class="about-icon">⚡</div>
+              <h3>State-of-the-Art Facility</h3>
+              <p>Premium equipment, recovery zones, saunas, and cryotherapy. Everything you need under one roof.</p>
+            </div>
+          </div>
+          <div class="about-cta reveal-3d">
+          </div>
+        </div>
+      </section>
+
+      <section class="page" data-index="5" id="contact">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Join The Movement</div>
+          <h2 class="section-title reveal-3d">Start Your<br><span class="gradient-text">Transformation</span></h2>
+          <p class="section-desc reveal-3d">Здесь укажите свои контакты, адрес, соцсети, чтобы клиент смог с Вами связаться</p>
+          <div class="contact-layout reveal-3d" style="display:flex;justify-content:center;">
+            <div class="contact-info-card">
+              <h3>Get In Touch</h3>
+              <div class="contact-item"><span class="contact-icon">📧</span><div><strong>Email</strong><a href="mailto:#">ВАША ПОЧТА</a></div></div>
+              <div class="contact-item"><span class="contact-icon">📞</span><div><strong>Phone</strong><a href="tel:#">ВАШ ТЕЛЕФОН</a></div></div>
+              <div class="contact-item"><span class="contact-icon">📍</span><div><strong>Address</strong><span>ВАШ АДРЕС</span></div></div>
+              <div class="contact-item"><span class="contact-icon">⏰</span><div><strong>Hours</strong><span>Open 24/7 — Staffed: 6:00 AM – 10:00 PM</span></div></div>
+            </div>
+          </div>
+          <div style="text-align:center;margin-top:32px">
+            <a href="https://globalplus.tech/#page-4" class="btn-outline" style="font-size:16px;padding:14px 40px;display:inline-block;text-decoration:none;">ВЕРНУТЬСЯ НА ГЛАВНУЮ</a>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="footer-inner">
+            <span class="footer-logo">ВАША КОМПАНИЯ</span>
+            <span class="footer-copy">© 2026 ВАША КОМПАНИЯ</span>
+          </div>
+        </footer>
+      </section>
+
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
